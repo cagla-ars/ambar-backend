@@ -121,7 +121,7 @@ Aşağıdaki adımları izleyerek backend uygulamasını lokal ortamda çalışt
 
 Projeyi klonlayın:
 
-git clone https://github.com/kullanici-adi/ambar-backend.git
+git clone https://github.com/cagla-ars/ambar-backend.git
 Environment değişkenlerini ayarlayın.
 
 Uygulamayı çalıştırın:
