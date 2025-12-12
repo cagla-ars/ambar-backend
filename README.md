@@ -95,60 +95,61 @@ Validation hata örneği
   "email": "Geçerli bir email giriniz"
 }
 
-Gizli Bilgiler ve Ortam Ayarları
+## Gizli Bilgiler ve Ortam Ayarları
 
-Proje environment variable tabanlı çalışır.
+Bu projede veritabanı bilgileri, mail hesapları ve JWT secret gibi hassas veriler
+doğrudan kod içinde tutulmaz.
+Tüm gizli bilgiler environment variable (ortam değişkenleri) üzerinden yönetilir.
+
+Bu yapı sayesinde proje GitHub üzerinde güvenli kalır ve farklı ortamlarda
+kolayca çalıştırılabilir.
 
 Örnek .env / applicationExample:
 
+```env
 DB_URL=
 DB_USERNAME=
 DB_PASSWORD=
 MAIL_USERNAME=
 MAIL_PASSWORD=
 JWT_SECRET=
-
-
 Gerçek veriler GitHub reposuna eklenmez.
 
-Kurulum ve Çalıştırma
+KURULUM VE ÇALIŞTIRMA
+
+Aşağıdaki adımları izleyerek backend uygulamasını lokal ortamda çalıştırabilirsiniz.
 
 Projeyi klonlayın:
 
 git clone https://github.com/kullanici-adi/ambar-backend.git
-
-
 Environment değişkenlerini ayarlayın.
 
 Uygulamayı çalıştırın:
 
 mvn spring-boot:run
 
-
 Backend varsayılan olarak aşağıdaki adreste çalışır:
 
 http://localhost:8081
-
 Örnek API Endpoint’leri
-Method	Endpoint	Açıklama
-POST	/api/auth/login	Login
-POST	/api/users	Kullanıcı oluştur
-GET	/api/products	Ürünleri getir
-POST	/api/products	Ürün ekle
-PUT	/api/products/{id}	Ürün güncelle
-DELETE	/api/products/{id}	Ürün sil
-GET	/api/transactions	Transaction listesi
-Notlar
+Method Endpoint Açıklama
+POST /api/auth/login Kullanıcı girişi
+POST /api/users Kullanıcı oluştur
+GET /api/products Ürünleri getir
+POST /api/products Ürün ekle
+PUT /api/products/{id} Ürün güncelle
+DELETE /api/products/{id} Ürün sil
+GET /api/transactions Stok hareketleri
 
-Proje eğitim ve gerçek kullanım senaryoları dikkate alınarak geliştirilmiştir
+*NOTLAR*
 
-Frontend (React vb.) uygulamalarla entegre çalışmaya uygundur
+Proje eğitim ve gerçek kullanım senaryoları dikkate alınarak geliştirilmiştir.
+Frontend uygulamalarla entegre çalışmaya uygundur.
+Temiz mimari ve güvenlik öncelikli bir yapı hedeflenmiştir.
 
-Temiz mimari ve güvenlik öncelikli bir yapı hedeflenmiştir
+*GELİŞTİRİCİ*
 
-Geliştirici
-
-Bu proje, Spring Boot backend geliştirme pratiği kazanmak ve
-kurumsal mimariyi öğrenmek amacıyla geliştirilmiştir.
+Bu proje Spring Boot backend geliştirme pratiği kazanmak ve
+kurumsal mimari yaklaşımını öğrenmek amacıyla geliştirilmiştir.
 
 Geri bildirimlere açıktır.
