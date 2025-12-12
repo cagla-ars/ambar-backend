@@ -90,12 +90,13 @@ Bu yapı sayesinde tüm stok hareketleri izlenebilir durumdadır.
 - `@NotBlank`, `@Email`, `@PositiveOrZero` gibi anotasyonlarla doğrulama yapılır
 - Validation ve runtime hataları GlobalExceptionHandler ile tek merkezden yönetilir
 
-Örnek hata çıktısı:
-```json
+Validation hata örneği
 {
   "email": "Geçerli bir email giriniz"
 }
+
 Gizli Bilgiler ve Ortam Ayarları
+
 Proje environment variable tabanlı çalışır.
 
 Örnek .env / applicationExample:
@@ -106,42 +107,39 @@ DB_PASSWORD=
 MAIL_USERNAME=
 MAIL_PASSWORD=
 JWT_SECRET=
+
+
 Gerçek veriler GitHub reposuna eklenmez.
 
 Kurulum ve Çalıştırma
 
 Projeyi klonlayın:
 
--git clone https://github.com/kullanici-adi/ambar-backend.git
+git clone https://github.com/kullanici-adi/ambar-backend.git
 
-Environment değişkenlerini ayarlayın
+
+Environment değişkenlerini ayarlayın.
 
 Uygulamayı çalıştırın:
 
--mvn spring-boot:run
+mvn spring-boot:run
+
+
 Backend varsayılan olarak aşağıdaki adreste çalışır:
 
 http://localhost:8081
 
 Örnek API Endpoint’leri
-
---Method--	--Endpoint--	     --Açıklama--
-************************************************
---POST--	/api/auth/login	      --Login--
-
---POST--	/api/users	          --Kullanıcı oluştur--
-
---GET-- 	/api/products	      --Ürünleri getir--
-
---POST--	/api/products	      --Ürün ekle--
-
---PUT--	    /api/products/{id}	  --Ürün güncelle--
-
---DELETE--	/api/products/{id}	  --Ürün sil--
-
---GET--	    /api/transactions	  --Transaction listesi--
-
+Method	Endpoint	Açıklama
+POST	/api/auth/login	Login
+POST	/api/users	Kullanıcı oluştur
+GET	/api/products	Ürünleri getir
+POST	/api/products	Ürün ekle
+PUT	/api/products/{id}	Ürün güncelle
+DELETE	/api/products/{id}	Ürün sil
+GET	/api/transactions	Transaction listesi
 Notlar
+
 Proje eğitim ve gerçek kullanım senaryoları dikkate alınarak geliştirilmiştir
 
 Frontend (React vb.) uygulamalarla entegre çalışmaya uygundur
@@ -149,7 +147,8 @@ Frontend (React vb.) uygulamalarla entegre çalışmaya uygundur
 Temiz mimari ve güvenlik öncelikli bir yapı hedeflenmiştir
 
 Geliştirici
+
 Bu proje, Spring Boot backend geliştirme pratiği kazanmak ve
 kurumsal mimariyi öğrenmek amacıyla geliştirilmiştir.
 
-Geri bildirimlere ve geliştirmeye açıktır.
+Geri bildirimlere açıktır.
