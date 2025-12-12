@@ -143,6 +143,11 @@ GET /api/transactions Stok hareketleri
 
 *NOTLAR*
 
+*AŞAĞIDAKİ FRONTENTLE BİRLİKTE ÇALIŞIR*
+
+Frontend repository:
+https://github.com/cagla-ars/ambar-frontend
+
 Proje eğitim ve gerçek kullanım senaryoları dikkate alınarak geliştirilmiştir.
 Frontend uygulamalarla entegre çalışmaya uygundur.
 Temiz mimari ve güvenlik öncelikli bir yapı hedeflenmiştir.
